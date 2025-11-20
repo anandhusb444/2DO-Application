@@ -10,13 +10,15 @@ function Todo() {
   const AddTask = () =>
   {
       if(!task.trim()) return;
-      setList([...list,task]);
+      setList([...list,{text:task,completed:false}]);
       setTask(""); 
   }
 
-  const DoneTask = () =>
+  const DoneTask = (index) =>
   {
-      
+      const doneTask = [...list];
+      doneTask[index].completed = !doneTask[index].completed
+      setList(doneTask);
   }
 
   const DeletTask = (index) => 
@@ -24,6 +26,8 @@ function Todo() {
       const update = list.filter((_,i) => i != index);
       setList(update);
   }
+
+
 
 
   return (
@@ -43,9 +47,13 @@ function Todo() {
                 </div>
 
                 <ul id='list-view'>
-                  {list.map((task,index) => (
-                    <li key={index}>{task} 
-                        <span onClick={() => DeletTask(index)}>&times;</span>
+                  {list.map((item,index) => (
+                  
+                    <li key={index}
+                       onClick={() => DoneTask(index)}
+                        className={item.completed ? "checked" : ""}>
+                          {item.text} 
+                        <span onClick={(e) => DeletTask(index)}>&times;</span>
                     </li>
                     
                   ))}

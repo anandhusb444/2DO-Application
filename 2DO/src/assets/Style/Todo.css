@@ -110,6 +110,11 @@ ul li span:hover{
     background: #edeef0;
 }
 
+.done{
+    text-decoration: line-through;
+    color: gray;
+}
+
 a {
     display: block;
     text-align: end;
