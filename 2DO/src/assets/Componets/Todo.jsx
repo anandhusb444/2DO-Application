@@ -53,7 +53,7 @@ function Todo() {
                        onClick={() => DoneTask(index)}
                         className={item.completed ? "checked" : ""}>
                           {item.text} 
-                        <span onClick={(e) => DeletTask(index)}>&times;</span>
+                        <span onClick={(e) => {e.stopPropagation(); DeletTask(index)}}>&times;</span>
                     </li>
                     
                   ))}
