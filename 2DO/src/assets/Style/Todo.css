@@ -8,13 +8,13 @@
 .container{
     width: 100%;
     height: 100vh;
-    background:linear-gradient(135deg,#5eead4,#2563eb);
+    background-color: #ffffff;
     padding:10px;
 }
 
 .todo{
     width: 100%;
-    background-color: #fff;
+    background-color: #f1f5f9;
     max-width: 540px;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #edeef0;
+    background: white;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -34,23 +34,24 @@
 input{
     flex: 1;
     border: none;
-    background: transparent;
+    background: white;
     padding: 15px;
     outline: none;
+    box-shadow:#555
 }
 
 button{
     border: none;
     outline: none;
     padding: 16px 50px;
-    background-color: orange;
+    background-color: #6366f1;
     border-radius: 45px;
     font-weight: 600;
     color: white;
 }
 
 .todo h2{
-    color: #002765;
+    color: black;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -95,20 +96,13 @@ ul li::before{
 
 ul li span{
     position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #555;
+    right: 5px;
+    top: 1px;
+    font-size: 20px;
     line-height: 40px;
     text-align: center;
-    border-radius: 50%;
 }
 
-ul li span:hover{
-    background: #edeef0;
-}
 
 .done{
     text-decoration: line-through;
@@ -121,4 +115,21 @@ a {
     color: black;
     text-decoration: none;
     padding: 15px;
+}
+
+button:hover{
+    background-color: #5c5edf;
+    transition: background-color 0.3s ease;
+    transition: ease-out 0.3s;
+}
+
+.material-symbols-outlined
+{
+    color: gray;
+    
+}
+
+.material-symbols-outlined:hover
+{
+    color: #555;
 }
