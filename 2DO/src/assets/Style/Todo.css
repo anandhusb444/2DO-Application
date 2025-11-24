@@ -55,6 +55,7 @@ button{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    font-weight: 400;
 }
 
 img{

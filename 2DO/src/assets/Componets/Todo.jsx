@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../Style/Todo.css'
-import logo from'../images/icon.png'
+import logo from '../images/slack.png'
 
 function Todo() {
 
@@ -34,7 +34,7 @@ function Todo() {
     <>
         <div className='container'>
             <div className='todo'>
-                <h2>TO DO - App <img src={logo} alt="todo picture" /></h2>
+                <h2>Task Manager<img src={logo} alt="todo picture" /></h2>
 
                 <div className='row'>
                     <input 
