@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
 import '../Style/Todo.css'
 import logo from '../images/slack.png'
+import { Toaster, toast } from "sonner";
+
+
 
 function Todo() {
+
+  const notify = () => toast.error("Enter your task")
 
   const [task, setTask] = useState("");
   const [list,setList] = useState([]);
 
   const AddTask = () =>
   {
+    if(task === "")
+    {
+      notify();
+      console.log("Clicked")
+    }
+
       if(!task.trim()) return;
       setList([...list,{text:task,completed:false}]);
       setTask(""); 
@@ -27,11 +38,9 @@ function Todo() {
       setList(update);
   }
 
-
-
-
   return (
     <>
+   <Toaster position="top-center" richColors />
         <div className='container'>
             <div className='todo'>
                 <h2>Task Manager<img src={logo} alt="todo picture" /></h2>
